@@ -4,12 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./Home";
 
 function App() {
-
   return (
     <Routes>
-      <Route path="/" element={<Home />}></Route>
+      <Route path="/react-demo-chat" element={<Home />}></Route>
       <Route
-        path="/hrithik"
+        path="/react-demo-chat/hrithik"
         element={
           <ChatEngine
             projectID="491bb66c-c5e3-4624-8ce8-70d37e8498ff"
@@ -19,7 +18,7 @@ function App() {
         }
       />
       <Route
-        path="/mahesh"
+        path="/react-demo-chat/mahesh"
         element={
           <ChatEngine
             projectID="491bb66c-c5e3-4624-8ce8-70d37e8498ff"

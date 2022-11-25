@@ -7,11 +7,11 @@ function Home() {
     <div className="App">
       <h4>Chat Room</h4>
 
-      <Link to="/hrithik">
+      <Link to="/react-demo-chat/hrithik">
         <button>Person1</button>
       </Link>
       <br />
-      <Link to="/mahesh">
+      <Link to="/react-demo-chat/mahesh">
         <button>Person2</button>
       </Link>
     </div>
