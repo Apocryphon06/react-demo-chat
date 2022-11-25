@@ -1,33 +1,21 @@
-import React from "react";
-import { ChatEngine } from "react-chat-engine";
+import React, { lazy, Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
+
+const Home = lazy(() => import("./Home"));
 
 function App() {
   return (
-    <Routes>
-      <Route path="/react-demo-chat" element={<Home />}></Route>
-      <Route
-        path="/react-demo-chat/hrithik"
-        element={
-          <ChatEngine
-            projectID="491bb66c-c5e3-4624-8ce8-70d37e8498ff"
-            userName="hrithik"
-            userSecret="Calypto@12"
-          />
-        }
-      />
-      <Route
-        path="/react-demo-chat/mahesh"
-        element={
-          <ChatEngine
-            projectID="491bb66c-c5e3-4624-8ce8-70d37e8498ff"
-            userName="mahi"
-            userSecret="Calypto@12"
-          />
-        }
-      />
-    </Routes>
+    <Suspense
+      fallback={
+        <center>
+          <div>loading...</div>
+        </center>
+      }
+    >
+      <Routes>
+        <Route path="/react-demo-chat" element={<Home />}></Route>
+      </Routes>
+    </Suspense>
   );
 }
 
